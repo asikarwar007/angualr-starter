@@ -1,0 +1,90 @@
+<div class="container-fluid">
+  <!-- Table -->
+  <div class="row">
+    <div class="col">
+      <div class="card bg-secondary shadow">
+        <div class="card-header bg-white border-0">
+          <div class="row align-items-center">
+            <div class="col-8">
+              <h3 class="mb-0">Add Student</h3>
+            </div>
+           
+          </div>
+        </div>
+        <div class="card-body">
+          <form>
+            <h6 class="heading-small text-muted mb-4"> Information</h6>
+            <div class="pl-lg-4">
+              <div class="row">
+                <div class="col-lg-6">
+                  <div class="form-group">
+                    <label class="form-control-label">First Name</label>
+                    <input type="text" class="form-control form-control-alternative" name="fields.firstName"
+                      [(ngModel)]='fields.firstName' placeholder=" first Name">
+                  </div>
+                </div>
+                
+                <div class="col-lg-6">
+                  <div class="form-group">
+                    <label class="form-control-label">last Name</label>
+                    <input type="text" class="form-control form-control-alternative" name="fields.lastName"
+                      [(ngModel)]='fields.lastName' placeholder=" last Name">
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="form-group">
+                    <label class="form-control-label">email</label>
+                    <input type="email" class="form-control form-control-alternative" name="fields.email"
+                      [(ngModel)]='fields.email' placeholder=" email">
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="form-group">
+                    <label class="form-control-label">collegeId</label>
+                    <input type="text" class="form-control form-control-alternative" name="fields.collegeId"
+                      [(ngModel)]='fields.collegeId' placeholder="collegeId">
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="form-group">
+                    <label class="form-control-label">collegeName</label>
+                    <input type="text" class="form-control form-control-alternative" name="fields.collegeName"
+                      [(ngModel)]='fields.collegeName' placeholder="collegeName">
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="form-group">
+                    <label class="form-control-label">contactNumber</label>
+                    <input type="text" class="form-control form-control-alternative" name="fields.contactNumber"
+                      [(ngModel)]='fields.contactNumber' placeholder="contactNumber">
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="form-group">
+                    <label class="form-control-label">track</label>
+                    <input type="text" class="form-control form-control-alternative" name="fields.track"
+                      [(ngModel)]='fields.track' placeholder="track">
+                  </div>
+                </div>
+                
+                <div class="col-lg-12">
+                  <div class="form-group">
+                    <label class="form-control-label"> image</label>
+                    <input type="file" name='image' accept='image/*' (change)="onimage($event)"
+                      class="form-control form-control-alternative">
+                    <div class="previweImage" *ngIf='this.fields.image'>
+                      <img class="imagepreview" [src]="this.fields.image">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="pl-lg-4 mt-3">
+              <button type="button" class="btn btn-primary" (click)='Submit()'>Add </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
