@@ -1,0 +1,102 @@
+<div class="header bg-gradient-bluebg pb-7 pt-4 pt-md-7"></div>
+<!-- Page content -->
+<div class="container-fluid mt--7">
+  <!-- Table -->
+  <div class="row">
+    <div class="col">
+      <div class="card bg-secondary shadow">
+        <div class="card-header bg-white border-0">
+          <div class="row align-items-center">
+            <div class="col-8">
+              <h3 class="mb-0">Update new Blog</h3>
+            </div>
+            <div class="col-4 text-right card-header-right">
+              <a class="btn btn-sm btn-primary" [routerLink]="['/super-admin/blog']"><i
+                  class="fas fa-tasks"></i>
+                manage</a>
+            </div>
+          </div>
+        </div>
+        <div class="card-body">
+          <form>
+            <h6 class="heading-small text-muted mb-4">Blog Information</h6>
+            <div class="pl-lg-4">
+              <div class="row">
+                 <div class="col-lg-12">
+                  <div class="form-group">
+                    <label class="form-control-label">category image</label>
+                    <input type="file" name='image' accept='image/*' (change)="onimage($event)"
+                      class="form-control form-control-alternative">
+                    <div class="previweImage" *ngIf='this.fields.image'>
+                      <img class="imagepreview" [src]="this.fields.image">
+                    </div>
+                  </div>
+                </div> 
+                <div class="col-lg-6">
+                  <div class="form-group">
+                    <label class="form-control-label">Blog Name</label>
+                    <input type="text" class="form-control form-control-alternative" name="fields.name"
+                      [(ngModel)]='fields.name' placeholder="Blog Name">
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="form-group">
+                      <label class="form-control-label">Blog mobile No</label>
+                      <input type="text" class="form-control form-control-alternative" name="fields.mobileNo"
+                        [(ngModel)]='fields.mobileNo' placeholder="Blog mobile No">
+                    </div>
+                  </div>
+                  <div class="col-lg-6">
+                    <div class="form-group">
+                      <label class="form-control-label">Blog email Id</label>
+                      <input type="text" class="form-control form-control-alternative" name="fields.emailId"
+                        [(ngModel)]='fields.emailId' placeholder="Blog email Id">
+                    </div>
+                  </div>
+                <div class="col-lg-12">
+                  <div class="form-group">
+                    <label class="form-control-label">category description</label>
+                    <textarea class="form-control form-control-alternative" name="fields.aboutUs"
+                      [(ngModel)]='fields.aboutUs' placeholder="category description" cols="30"
+                      rows="10"></textarea>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- <h6 class="heading-small text-muted mb-4">SEO Tags</h6> -->
+            <!-- <div class="pl-lg-4">
+              <div class="row">
+                <div class="col-lg-12">
+                  <div class="form-group">
+                    <label class="form-control-label">seo title</label>
+                    <input type="text" class="form-control form-control-alternative" name="fields.seoTitle" [(ngModel)]='fields.seoTitle'
+                      placeholder="SEO Title">
+                  </div>
+                </div>
+              
+                <div class="col-lg-12">
+                  <div class="form-group">
+                    <label class="form-control-label">Seo description</label>
+                    <textarea class="form-control form-control-alternative" name="fields.seoDescription"
+                      [(ngModel)]='fields.seoDescription' placeholder="SEO description" cols="30" rows="10"></textarea>
+                  </div>
+                </div>
+                <div class="col-lg-12">
+                  <div class="form-group">
+                    <label class="form-control-label">Seo Keywords</label>
+                    <input type="text" class="form-control form-control-alternative" name="fields.seoKeywords"
+                      [(ngModel)]='fields.seoKeywords' placeholder="SEO Keywords">
+                    
+                  </div>
+                </div>
+              </div>
+            </div> -->
+            <div class="pl-lg-4 mt-3">
+              <button type="button" class="btn btn-primary" (click)='Submit()'>Update</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
