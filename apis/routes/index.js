@@ -4,7 +4,7 @@ var studentController = require('../controllers/student.controller')
 
 
 router.post('/add', studentController.addData)
-router.post('/list', studentController.getAllData)
+router.get('/list', studentController.getAllData)
 router.post('/studentbyid', studentController.getDatabyId)
 router.post('/edit', studentController.updateData)
 router.post('/remove', studentController.deleteData)
